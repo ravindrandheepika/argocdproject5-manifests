@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: argocdproject5-service
 spec:
-  type: ClusterIP
   selector:
     app: argocdproject5-app
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 8080
+  type: LoadBalancer
