@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocdproject5-app
+  labels:
+    app: argocdproject5-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: argocdproject5-app
+  template:
+    metadata:
+      labels:
+        app: argocdproject5-app
+    spec:
+      containers:
+        - name: argocdproject5-app
+          image: devopsacrdheepika.azurecr.io/argocdproject5:latest
+          ports:
+            - containerPort: 8080
