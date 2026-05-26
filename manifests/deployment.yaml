@@ -18,4 +18,4 @@ spec:
         - name: argocdproject5-app
           image: devopsacrdheepika.azurecr.io/nodejs-shopping-cart:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
