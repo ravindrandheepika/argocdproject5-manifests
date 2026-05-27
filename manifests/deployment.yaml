@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argocdproject5-app
+  name: argocdproject5
   labels:
-    app: argocdproject5-app
+    app: argocdproject5
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: argocdproject5-app
+      app: argocdproject5
   template:
     metadata:
       labels:
-        app: argocdproject5-app
+        app: argocdproject5
     spec:
       containers:
-        - name: argocdproject5-app
+        - name: argocdproject5
           image: devopsacrdheepika.azurecr.io/nodejs-shopping-cart:latest
           ports:
             - containerPort: 3000
